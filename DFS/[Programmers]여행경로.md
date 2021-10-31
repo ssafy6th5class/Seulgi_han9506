@@ -26,7 +26,7 @@ def solution(tickets):
                 visited[i] = 1   # 방문 체크
                 dfs(visited, tickets[i][1], tickets, 1, ["ICN"]+[tickets[i][1]])
                 visited[i] = 0  # 모든 도시를 방문할 수 있는 출발점이 아닐 수 있으므로 다시 0으로
-				if len(answer) >= 1:
+                if len(answer) >= 1:
                     break
                     
     return answer[:][0]
