@@ -520,6 +520,55 @@
 
 - 각 Vue 인스턴스의 초기화 단계에서 사용자 로직 실행하는 것
 
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      img {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Cat Image</h2>
+      <p><img v-if="imgSrc" :src="imgSrc" alt="sample img"></p>
+      <button @click="getImg">Get Cat</button>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      const API_URL = 'https://api.thecatapi.com/v1/images/search'
+  
+      const app = new Vue({
+        el: '#app',
+        data: {
+          imgSrc: '',
+        },
+        methods: {
+          getImg: function () {
+            axios.get(API_URL)
+              .then(response => {
+                this.imgSrc = response.data[0].url
+                console.log(this.imgSrc)
+              })
+          }
+        },
+        created: function () {
+          this.getImg()
+        }
+      })
+    </script>
+  </body>
+  </html>
+  ```
+
 ##### lodash library
 
 - 모듈성, 성능 및 추가 기능을 제공하는 자바스크립트 유틸리티 라이브러리
