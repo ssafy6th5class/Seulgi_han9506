@@ -21,7 +21,7 @@ for i in range(M):
             counts[2][1] += 1
         elif arr[j][i] == 'C':
             counts[3][1] += 1
-
+            
 	max_cnt = 0      # 가장 많이 나온 문자의 개수 찾기
     for k in range(4):
         if counts[k][1] > max_cnt:  # counts[k][1]이 max_cnt보다 크다면
