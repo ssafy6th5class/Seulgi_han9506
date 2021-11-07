@@ -64,7 +64,7 @@
 - HTMLCollection & NodeList 
 
   - 배열과 같이 각 항목에 접근하기 위한 index 제공
-  - HTMLCollection : name, id, index 속성으로 각 항목에 접근 가능, Live Coeection이므로 DOM의 변경사항 실시간 반영
+  - HTMLCollection : name, id, index 속성으로 각 항목에 접근 가능, Live Collection이므로 DOM의 변경사항 실시간 반영
   -  NodeList : index로만 접근 가능, querySelectorAll()에 의해 반환되는 노드리스트는 Static Collection으로 실시간 반영되지 않음
 
 - Collection
@@ -156,14 +156,16 @@
 ##### EVENT
 
 - 네트워크 활동이나 사용자와의 상호작용같은 사건의 발생 알리기 위한 객체
+
 - 특정 메서드 호출, 마우스 클릭 등등으로 이벤트 발생
+
 - 특정 이벤트(type)가 발생하면, 할 일(listener)을 등록한다.
 
 - Event handler
 
   - EventTarget.addEventListener() : 지정한 이벤트가 대상에 전달될 때마다 호출할 함수 설정
   - 이벤트 지원하는 모든 객체 Element, Document, Window 대상으로 지정 가능
-  - Eventtarget.addEventListener(type, listener[, options])
+  - EvenTarget.addEventListener(type, listener[, options])
     1. type : 반응할 이벤트 유형
     2. listener : 지정된 타입의 이벤트가 발생했을 때 알림받는 객체, EventListener 인터페이스 혹은 JS function 객체(콜백 함수)여야 함
 
