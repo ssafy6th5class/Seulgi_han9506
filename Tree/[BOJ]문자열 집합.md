@@ -1,7 +1,7 @@
 ```python
 '''
 시간이 엄청 오래 걸리지만 통과하기는 함.
-집합 S에 들어가는 문자열(array)은 똑같은 문자열들이 있다. 그래서 그래서 set을 통해 중복되는 문자열을 제거하면 빠르게 통과할 수 있다. set([input() for _ in range(N)])
+집합 S에 들어가는 문자열(array)은 똑같은 문자열들이 있다. 그래서 set을 통해 중복되는 문자열을 제거하면 빠르게 통과할 수 있다. set([input() for _ in range(N)])
 '''
 
 N, M = map(int, input().split())
